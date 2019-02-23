@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" href="favicon.ico">
+
+		<title>Story</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="css/bootstrap-grid.min.css" rel="stylesheet">
+
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i|Poppins:500" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<link href="css/main.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<header>
+			<div class="menu-btn">
+				<i class="fas fa-bars"></i>
+			</div>
+			<ul class="menu">
+				<li><a href="#first_story">First story</a></li>
+				<li><a href="#second_story">Second story</a></li>
+				<li><a href="#video">Video</a></li>
+				<li><a href="#end_of_story">Story end</a></li>
+				<li><a href="#last_section">Subscribe</a></li>
+			</ul>
+			<div class="container">
+				<div class="header_title">
+					<div class="header_title_text">
+						<h3>Marcy..</h3>
+						<h1>story</h1>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<section id="first_story">
+			<div class="container">
+				<div class="first_story">
+					<div class="fs_text">
+						<span class="above_title">travel</span>
+						<h3 class="title">Nullam id dolor id nibh ultricies vehicula ut id elit.</h3>
+						<p class="story_text">Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. </p>
+						<p class="story_text">Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+						<button class="fs_btn">full story <span>→</span></button>
+					</div>
+					<div class="fs_images">
+						<div class="fs_big_image">
+							<img width="1100" class="story_img" src="img/nature.png">
+							<div class="fs_small_image">
+								<img class="story_img" src="img/nature1.png">
+							</div>
+						</div>						
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="second_story">
+			<div class="container">
+				<div class="second_story">
+					<div class="ss_title">
+						<span class="above_title">travel</span>
+						<h3 class="title">Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.</h3>
+					</div>
+					<div class="ss_img">
+						<img class="story_img" src="img/running_man.png">
+					</div>
+					<div class="ss_text">
+						<p class="story_text">Donec aredsed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla.</p>
+						<p class="story_text">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. </p>
+						<button class="fs_btn">full story <span>→</span></button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="video">
+			<div class="video">
+				<video controls="controls" poster="img/video.jpg">
+					<source src="video/Ricardo.mp4" type='video/mp4'>
+				</video>
+			</div>
+		</section>
+
+		<section id="end_of_story">
+			<div class="container">
+				<div class="story_end">
+					<div class="se_img">
+						<img class="story_img" src="img/nature1.png">
+						<div class="se_quote">
+							<p>“Donec id elit non mi porta gravida at eget metus. Vestibulum id ligula porta felis euismod semper. Curabitur blandit tempus porttitor”</p>
+							<div class="q_end">ven diesel <span>1962-2006</span></div>
+							<button class="fs_btn">full story <span>→</span></button>
+						</div>
+					</div>
+					<div class="se_title">
+						<span class="above_title">quote</span>
+						<h3 class="title">Nullam id dolor id nibh ultricies vehicula elit. </h3>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer id="last_section">
+			<div class="container">
+				<div class="footer_block">
+					<div class="footer_title">
+						<p>Like what you're reading? Get weekly updates that will help you grow as a designer.</p>
+					</div>
+					<form class="footer_form">
+						<input class="inp_form" type="text" name="name" placeholder="name">
+						<input class="inp_form inp_form2" type="text" name="email" placeholder="email">
+						<input class="fs_btn inp_button" type="button" name="button_subm" value="subscribe →">
+					</form>
+				</div>
+			</div>
+		</footer>
+
+
+
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/jquery-3.2.1.slim.min.js"><\/script>')</script>
+		<script>
+			$(document).ready(function(){
+				$('.fa-bars').click(function() {
+					if(!$('.menu').hasClass('menu_active')){
+						$('.menu').addClass('menu_active')
+					}
+					else
+					{
+						$('.menu').removeClass('menu_active')
+					}
+				})
+
+			$(".menu").on("click","a", function (event) {
+				event.preventDefault();
+				var id  = $(this).attr('href'),
+				top = $(id).offset().top;
+				$('body,html').animate({ scrollTop: top}, 1500);
+				})
+			});
+		</script>
+	</body>
+</html>
