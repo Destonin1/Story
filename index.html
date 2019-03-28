@@ -122,7 +122,14 @@
 			</div>
 		</footer>
 
-
+		<div class="full_story_wrapper">
+		</div>
+		<div class="full_story">
+			<h2>Story</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla in consequuntur repudiandae sunt accusantium magnam tempore autem quisquam vitae delectus quos sint porro voluptates, quaerat ipsa magni molestias qui recusandae quibusdam! Magnam non assumenda odio maxime suscipit repellendus rerum, facere, eos cupiditate mollitia ex delectus cum atque cumque exercitationem. Soluta adipisci sint hic, quibusdam provident eos ab! Corporis dignissimos minus neque, ipsum recusandae culpa ab harum officia nam quasi quisquam, asperiores suscipit earum dolorum, alias aut? Omnis quae hic eligendi consectetur illo reprehenderit recusandae, unde obcaecati deserunt tempora dolorem excepturi velit, ex repellendus harum, voluptate, repellat aliquam cumque minus nobis facere. Tenetur ipsa eligendi, distinctio dicta placeat beatae qui voluptatem suscipit fugiat eum enim, magnam quisquam quasi molestias est reiciendis quia! Repellendus, quam nisi qui fuga ea soluta molestias exercitationem eius nam ducimus accusamus, placeat, quasi totam quis aperiam ab a modi? Beatae nam nisi totam sed sapiente, perspiciatis animi, aperiam doloribus eveniet, tempore consequatur earum et nobis mollitia consequuntur dolorem corrupti eaque temporibus praesentium maxime odit eum eius, architecto reiciendis blanditiis! Reprehenderit, temporibus facilis eveniet alias vitae excepturi pariatur, perspiciatis incidunt est repellat accusantium corporis, deserunt! Id obcaecati vero assumenda totam quos repellat inventore laboriosam, cum natus itaque rerum accusamus dolor at tempore officia dicta expedita dolorem deserunt, est vel aperiam placeat alias ab ex. Possimus nisi, ut ipsam, fugiat velit eius, beatae corrupti eveniet maiores unde placeat distinctio. Est temporibus cupiditate quia, numquam, sunt vitae nostrum quo saepe voluptatibus nemo aut iusto, natus accusamus ullam perspiciatis ipsam! Nobis numquam, porro voluptates vitae dolores nihil ducimus! Id obcaecati vero assumenda totam quos repellat inventore laboriosam, cum natus itaque rerum accusamus dolor at tempore officia dicta expedita dolorem deserunt, est vel aperiam placeat alias ab ex. Possimus nisi, ut ipsam, fugiat velit eius, beatae corrupti eveniet maiores repellendus harum, voluptate, repellat aliquam cumque minus nobis facere. Tenetur ipsa eligendi, distinctio dicta placeat beatae qui voluptatem suscipit fugiat eum enim, magnam quisquam quasi molestias est reiciendis quia! Repellendus, quam nisi qui fuga ea soluta molestias exercitationem eius nam ducimus accusamus, placeat, quasi totam quis aperiam ab a modi? Beatae nam nisi totam sed sapiente, perspiciatis animi, aperiam doloribus eveniet, tempore consequatur</p>
+			<p>Earum et nobis mollitia consequuntur dolorem corrupti eaque temporibus praesentium maxime odit eum eius, architecto reiciendis blanditiis! Reprehenderit, temporibus facilis eveniet alias vitae excepturi pariatur, perspiciatis incidunt est repellat accusantium corporis, deserunt! Id obcaecati vero assumenda totam quos repellat inventore laboriosam, cum natus itaque rerum accusamus dolor at tempore officia dicta expedita dolorem deserunt, est vel aperiam placeat alias ab ex. Possimus nisi, ut ipsam, fugiat velit eius, beatae corrupti eveniet maiores unde placeat distinctio. Est temporibus cupiditate quia, numquam, sunt vitae nostrum quo saepe voluptatibus nemo aut iusto, natus accusamus ullam perspiciatis ipsam! Nobis numquam, porro voluptates vitae dolores nihil ducimus! Id obcaecati vero assumenda totam quos repellat inventore laboriosam, cum natus itaque rerum accusamus dolor at tempore officia dicta expedita dolorem deserunt, est vel aperiam placeat alias ab ex. P unde placeat distinctio. Est temporibus cupiditate quia, numquam, sunt vitae nostrum quo saepevoluptatibus nemo aut iusto, natus accusamus ullam perspiciatis ipsam! Nobis numquam, porro voluptates vitae dolores nihil ducim Consequuntur nostrum, itaque neque nisi accusamus officia odio reprehenderit nam. Aliquam rem, repellendus saepe eos! Voluptatibus maiores dignissimos labore beatae aspernatur, dolor cupiditate culpa, quis reiciendis nemo amet rerum temporibus ratione, alias dicta eius sed nisi molestiae est? Praesentium doloribus eligendi quia at.</p>
+			<div class="close_story">&times;</div>
+		</div>
 
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/jquery-3.2.1.slim.min.js"><\/script>')</script>
@@ -144,6 +151,18 @@
 				top = $(id).offset().top;
 				$('body,html').animate({ scrollTop: top}, 1500);
 				})
+
+			$(".fs_btn").click(function(){
+				$(".full_story_wrapper").toggleClass("full_story_wrapper_active");
+				$(".full_story").toggleClass("full_story_active");
+				$("body").css("overflow", "hidden");
+			})
+
+			$(".close_story").click(function(){
+				$(".full_story_wrapper").toggleClass("full_story_wrapper_active");
+				$(".full_story").toggleClass("full_story_active");
+				$("body").css("overflow", "visible");
+			})
 			});
 		</script>
 	</body>
