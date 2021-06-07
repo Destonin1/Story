@@ -5,7 +5,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="description" content="">
 		<meta name="author" content="">
-		<link rel="icon" href="favicon.ico">
 
 		<title>Story</title>
 
@@ -47,7 +46,7 @@
 						<h3 class="title">Nullam id dolor id nibh ultricies vehicula ut id elit.</h3>
 						<p class="story_text">Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. </p>
 						<p class="story_text">Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-						<button class="fs_btn">full story <span>→</span></button>
+						<button class="fs_btn fs_btn_story">full story <span>→</span></button>
 					</div>
 					<div class="fs_images">
 						<div class="fs_big_image">
@@ -74,7 +73,7 @@
 					<div class="ss_text">
 						<p class="story_text">Donec aredsed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla.</p>
 						<p class="story_text">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. </p>
-						<button class="fs_btn">full story <span>→</span></button>
+						<button class="fs_btn fs_btn_story">full story <span>→</span></button>
 					</div>
 				</div>
 			</div>
@@ -96,7 +95,7 @@
 						<div class="se_quote">
 							<p>“Donec id elit non mi porta gravida at eget metus. Vestibulum id ligula porta felis euismod semper. Curabitur blandit tempus porttitor”</p>
 							<div class="q_end">ven diesel <span>1962-2006</span></div>
-							<button class="fs_btn">full story <span>→</span></button>
+							<button class="fs_btn fs_btn_story">full story <span>→</span></button>
 						</div>
 					</div>
 					<div class="se_title">
@@ -116,7 +115,7 @@
 					<form class="footer_form">
 						<input class="inp_form" type="text" name="name" placeholder="name">
 						<input class="inp_form inp_form2" type="text" name="email" placeholder="email">
-						<input class="fs_btn inp_button" type="button" name="button_subm" value="subscribe →">
+						<input class="fs_btn inp_button" type="button" name="button_subm" value="subscribe">
 					</form>
 				</div>
 			</div>
@@ -149,16 +148,21 @@
 				event.preventDefault();
 				var id  = $(this).attr('href'),
 				top = $(id).offset().top;
-				$('body,html').animate({ scrollTop: top}, 1500);
+				$('body,html').animate({ scrollTop: top}, 500);
 				})
 
-			$(".fs_btn").click(function(){
+			$(".fs_btn_story").click(function(){
 				$(".full_story_wrapper").toggleClass("full_story_wrapper_active");
 				$(".full_story").toggleClass("full_story_active");
 				$("body").css("overflow", "hidden");
 			})
 
 			$(".close_story").click(function(){
+				$(".full_story_wrapper").toggleClass("full_story_wrapper_active");
+				$(".full_story").toggleClass("full_story_active");
+				$("body").css("overflow", "visible");
+			})
+			$(".full_story_wrapper").click(function(){
 				$(".full_story_wrapper").toggleClass("full_story_wrapper_active");
 				$(".full_story").toggleClass("full_story_active");
 				$("body").css("overflow", "visible");

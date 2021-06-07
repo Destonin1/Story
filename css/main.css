@@ -106,6 +106,13 @@ body {
 	text-transform: uppercase;
 	letter-spacing: 35px;
 	font-weight: 300;
+	-webkit-user-select: none;
+    /* user-select -- это нестандартное свойство */
+
+    -moz-user-select: none;
+    /* поэтому нужны префиксы */
+
+    -ms-user-select: none;
 }
 
 /*FIRST STORY */
